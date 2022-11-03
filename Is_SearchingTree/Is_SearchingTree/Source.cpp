@@ -25,7 +25,7 @@ void Check(vector<Tree> vec, ofstream& fout) {
 		if (vec[i].c == 'L') {
 			vec[i].rb = vec[(vec[i].line - 1)].value;
 			vec[i].lb = vec[(vec[i].line - 1)].lb;
-			if (vec[i].lb < vec[i].value && vec[i].rb > vec[i].value) {
+			if (vec[i].lb <= vec[i].value && vec[i].rb > vec[i].value) {
 				
 			}
 			else {
@@ -68,13 +68,3 @@ int main() {
 	Check(vec, fout);
 	return 0;
 }
-
-/*2
-1
-2 1 R
-3 2 R
-4 3 R
-0 1 L
--2 6 L
-- 4 7 L
--3 8 R*/
